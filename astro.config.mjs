@@ -5,6 +5,8 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import config from "./src/config/config.json";
+import icon from "astro-icon";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,6 +25,7 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
     mdx(),
+    icon(),
   ],
   markdown: {
     remarkPlugins: [],
@@ -32,4 +35,5 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+  
 });
